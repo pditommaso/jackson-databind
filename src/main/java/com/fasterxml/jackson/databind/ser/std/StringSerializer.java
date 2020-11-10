@@ -33,6 +33,7 @@ public final class StringSerializer
 
     @Override
     public void serialize(Object value, JsonGenerator gen, SerializerProvider provider) throws IOException {
+        String str = value != null ? String.valueOf(value) : null; 
         gen.writeString((String) value);
     }
 
